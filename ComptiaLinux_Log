@@ -1,18 +1,61 @@
-redirecting with >
-appending with >>
+From the labex room all these logs are saved for future refernces.
+==============
 
 redirecting stderr
-==============
+-------------------
 redirecting error stderr with 2>
 appending stderr with 2>>
 
 stderr redirecting and output
-==============
+-------------------
 combining both stderr and output with &>
-traditioanl way : 'filename' 2>&1
+traditioanl way :	'filename' 2>&1
 
 'tee' command
-==============
+-------------------
 purpose	 redirecting also viewing through terminal
 syntax	 cmd | tee filename
 example	 date | tee out.txt
+
+'chage' command
+-------------------
+purpose:	to define password aging policies
+arguments:	-m, -M,-W.
+example:	sudo chage -m 20 -M 60 -W 14 user_name
+
+'useradd' command
+-------------------
+purpose:	to create a new user.
+argumet:	-m (to map the default home directory with the user.
+example:	sudo useradd -m user_name
+
+'userdel'command
+-------------------
+purpose:	to delete a user account.
+argument:	-r (without -r only the user entries will delete not the configurations and home dir)
+example:	sudo userdel -r user_name.
+
+'passwd' command
+-------------------
+purpose:	to set a password for the user account.
+argument:	-l , -u.
+example:	sudo passwd user_name		(set up the passwd)
+		sudo passwd -l user_name	(lock the passwd)
+		sudo passwd -u user_name	(unlock the passwd)
+
+'groupadd' command
+-------------------
+purpose:	to create a group.
+example:	sudo groupadd group_name
+
+'groupdel' command
+-------------------
+purpose:	to delete a group.
+example:	sudo groupdel group_name.
+
+'usermod' command
+-------------------
+purpose:	to edit user,group functions,utilities etc.
+arguments:	-a.
+example:	sudo usermod -aG group_name user_name (without -a only the last added group will persist).
+
