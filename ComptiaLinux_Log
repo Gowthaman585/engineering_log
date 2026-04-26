@@ -1,0 +1,18 @@
+redirecting with >
+appending with >>
+
+redirecting stderr
+==============
+redirecting error stderr with 2>
+appending stderr with 2>>
+
+stderr redirecting and output
+==============
+combining both stderr and output with &>
+traditioanl way : 'filename' 2>&1
+
+'tee' command
+==============
+purpose	 redirecting also viewing through terminal
+syntax	 cmd | tee filename
+example	 date | tee out.txt
